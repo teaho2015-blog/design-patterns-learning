@@ -1,3 +1,5 @@
-# My Awesome Book
+# Design Pattern Learning
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+本文档主要目的是自我学习设计模式。
+
+

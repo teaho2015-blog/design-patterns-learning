@@ -1,0 +1,24 @@
+{
+
+    "plugins": ["disqus", 
+                "mermaid",
+                "include-codeblock", 
+                "ga",
+                "advanced-emoji"
+               ],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "spring-source-code-learning-gitbook-teaho-net"
+        },
+        "include-codeblock": {
+            "template": "default",
+            "unindent": "true",
+            "theme": "monokai"
+        }, 
+        "ga": {
+            "token": "UA-90704189-1"
+        }
+    }
+}
+
+
