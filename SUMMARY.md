@@ -5,5 +5,5 @@
 
 ## PART I
 
-* [单例模式](dan-li-mo-shi.md)
+* [单例模式](Singleton/Singleton.md)
 
