@@ -8,7 +8,7 @@
     "pluginsConfig": {
         "include-codeblock": {
             "template": "default",
-            "unindent": "true",
+            "unindent": true,
             "theme": "monokai"
         }
     }
