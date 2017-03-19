@@ -23,16 +23,17 @@
 | 典型例子 | java.lang.Runtime | java.lang.Math |
 | 存储区域 | 永久代（PermGen） | 永久代（PermGen） |
 | 初始化时间点 | 用到时创建 | 加载时创建 |
-| OOP（主要） | 可以实现接口；在外部能作为其他类的属性或方法参数 |   |
+| OOP（主要） | 可以实现接口；在外部能作为其他类的属性或方法参数 | (空) |
 注：
 * 存储区域的特指在jdk 1.6下 [ [1] ](#references)，我这里先挖个坑，就我所知，大小是差不多，但引用是否也在PermGen，而且不同版本jvm的存储位置在哪，这个点我没实测且影响不大，留待我以后可能学jvm时再填坑。
 * 初始化时间点中仅针对主流用法，单例的时间点也要取决于具体哪种单例，而静态类的加载其实与具体jvm的实现有关，某些jvm是在用到时才创建的。
 
 
-###
-
-
-
+### 单例的各种写法
+#### 饿汉式加载
+[include](../src/main/java/com/tea/singleton/Singleton1.java)
 
 ### References
 [1] [ 知乎|方法区的Class信息,又称为永久代,是否属于Java堆？ ](https://www.zhihu.com/question/49044988)
+
+{% mermaid %} graph TD; A-->B; A-->C; B-->D; C-->D; {% endmermaid %}
