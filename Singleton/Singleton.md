@@ -32,8 +32,16 @@
 ### 单例的各种写法
 #### 饿汉式加载
 [include](../src/main/java/com/tea/singleton/Singleton1.java)
+急切的加载写法，对于一些必定会使用到且启动早期就会使用的对象（如日志对象），使用该方法并不是不行。
+
+#### 双重校验锁
+[include](../src/main/java/com/tea/singleton/Singleton2.java)
+能起到延迟加载的效果。注意，由于volitale关键字，java1.5之前的版本不支持该写法。
+
+#### 泛型
+[include](../src/main/java/com/tea/singleton/Singleton3.java)
+这种书写方式是《Effective Java》中最推荐的单例写法，一目了然，推荐。
 
 ### References
 [1] [ 知乎|方法区的Class信息,又称为永久代,是否属于Java堆？ ](https://www.zhihu.com/question/49044988)
 
-{% mermaid %} graph TD; A-->B; A-->C; B-->D; C-->D; {% endmermaid %}
