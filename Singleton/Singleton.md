@@ -46,11 +46,11 @@
 其实这种情况比较少出现。但是，如果存在享有特权的客户端使用反射，调用私有构造器，就需要防范一下。
 [枚举](#枚举)天生能免疫这用情况。
 [双重校验锁](#双重校验锁)能通过在默认构造器中加上如下代码防御反射：
-> synchronized (Singleton2.class) {
->   if (instance != null) {
->       //throw 一个异常
->   }
->}
+> synchronized (Singleton2.class) {  
+>   if (instance != null) {  
+>       //throw 一个异常  
+>   }  
+>}  
 
 ### References
 [1] [ 知乎|方法区的Class信息,又称为永久代,是否属于Java堆？ ](https://www.zhihu.com/question/49044988)
