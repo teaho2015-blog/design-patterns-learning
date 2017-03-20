@@ -23,7 +23,7 @@
 | 典型例子 | java.lang.Runtime | java.lang.Math |
 | 存储区域 | 永久代（PermGen） | 永久代（PermGen） |
 | 初始化时间点 | 用到时创建 | 加载时创建 |
-| OOP（主要） | 可以实现接口；在外部能作为其他类的属性或方法参数 | (空) |
+| OOP（主要） | 可以实现接口；单例对象能作为其他类的属性或方法参数 | (空) |
 注：
 * 存储区域的特指在jdk 1.6下 [ [1] ](#references)，我这里先挖个坑，就我所知，大小是差不多，但引用是否也在PermGen，而且不同版本jvm的存储位置在哪，这个点我没实测且影响不大，留待我以后可能学jvm时再填坑。
 * 初始化时间点中仅针对主流用法，单例的时间点也要取决于具体哪种单例，而静态类的加载其实与具体jvm的实现有关，某些jvm是在用到时才创建的。
@@ -38,9 +38,19 @@
 [include](../src/main/java/com/tea/singleton/Singleton2.java)
 能起到延迟加载的效果。注意，由于volitale关键字，java1.5之前的版本不支持该写法。
 
-#### 泛型
+#### 枚举
 [include](../src/main/java/com/tea/singleton/Singleton3.java)
 这种书写方式是《Effective Java》中最推荐的单例写法，一目了然，推荐。
+
+### 考虑反射的单例
+其实这种情况比较少出现。但是，如果存在享有特权的客户端使用反射，调用私有构造器，就需要防范一下。
+[枚举](#枚举)天生能免疫这用情况。
+[双重校验锁](#双重校验锁)能通过在默认构造器中加上如下代码防御反射：
+> synchronized (Singleton2.class) {
+>   if (instance != null) {
+>       //throw 一个异常
+>   }
+>}
 
 ### References
 [1] [ 知乎|方法区的Class信息,又称为永久代,是否属于Java堆？ ](https://www.zhihu.com/question/49044988)
