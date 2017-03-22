@@ -8,6 +8,11 @@
 
 ### 作用及应用场景
 在Java应用中，单例模式能保证在一个JVM中，该单例对象只有一个实例存在。
+
+单例模式的uml图:
+
+![Singleton.png](Singleton.png)
+
 应用场景如下：
 1. 在开发中，有一些对象可能我们只需要一个，例如：线程池、缓存、日志对象、一些操作系统设备的类。
 2. 相比于用new关键字创建多个对象，能降低系统开销，减轻jvm压力。
@@ -31,15 +36,15 @@
 
 ### 单例的各种写法
 #### 饿汉式加载
-[include](../src/main/java/com/tea/singleton/Singleton1.java)
+[include:7-](../src/main/java/com/tea/singleton/Singleton1.java)
 急切的加载写法，对于一些必定会使用到且启动早期就会使用的对象（如日志对象），使用该方法并不是不行。
 
 #### 双重校验锁
-[include](../src/main/java/com/tea/singleton/Singleton2.java)
+[include:7-](../src/main/java/com/tea/singleton/Singleton2.java)
 能起到延迟加载的效果。注意，由于volitale关键字，java1.5之前的版本不支持该写法。
 
 #### 枚举
-[include](../src/main/java/com/tea/singleton/Singleton3.java)
+[import:7-](../src/main/java/com/tea/singleton/Singleton3.java)
 这种书写方式是《Effective Java》中最推荐的单例写法，一目了然，推荐。
 
 ### 考虑反射的单例
