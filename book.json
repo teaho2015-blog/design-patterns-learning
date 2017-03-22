@@ -1,12 +1,12 @@
 {
 
     "plugins": [
-                "mermaid",
-                "include-codeblock", 
+                "include-codeblock",
                 "advanced-emoji",
                 "anchors",
                 "disqus",
-                "ga"
+                "ga",
+                "plantuml"
                ],
     "pluginsConfig": {
         "include-codeblock": {
