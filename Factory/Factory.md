@@ -63,4 +63,3 @@ product.pack();
 
 
 ### References
-[1][ wiki百科|File:Decorator UML class diagram.svg ](https://en.wikipedia.org/wiki/File:Decorator_UML_class_diagram.svg)
