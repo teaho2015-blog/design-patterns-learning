@@ -4,9 +4,6 @@
  */
 package com.tea.factory.factoryMethod;
 
-
-import com.tea.factory.simple.NoTypeDeFoundException;
-
 public abstract class Store {
     public Product orderProduct(String type) {
         Product product = createProduct(type);
