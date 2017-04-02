@@ -75,12 +75,19 @@ product.pack();
 
 ### 是什么？
 
-抽象工厂模式提供一个接口，用于创建相关或依赖的类的家族。
+抽象工厂模式提供一个接口，用于创建相关或依赖的类的家族，而且无需指定他们的具体类。
 
 ### 结构组成
 
-
+下图是摘自Wikipedia中抽象工厂模式的UML类图（对比了下，比我画的美观多了。。，就直接用维基的吧）：
+![AbstractFactory UML diagram](1024px-Abstract_factory_UML.svg.png)
 
 ### 示例实现
 
+[完整代码看这里](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/factory/abstractFactory)。
+
+连接的代码简单地按照了上图的[结构组成](#结构组成)中的UML实现出来的，在这里不再重复贴代码。对了，《深入浅出设计模式》中抽象工厂模式部分用一个结合了抽象工厂模式和工厂方法模式的实例去解读抽象工厂，比较形象，可以去读一下，也能从中品味两种工厂模式的区别和他们结合的威力。
+
 ## References
+[wikipedia | 抽象工厂模式](https://en.wikipedia.org/wiki/Abstract_factory_pattern)
+
