@@ -89,5 +89,5 @@ product.pack();
 连接的代码简单地按照了上图的[结构组成](#结构组成)中的UML实现出来的，在这里不再重复贴代码。对了，《深入浅出设计模式》中抽象工厂模式部分用一个结合了抽象工厂模式和工厂方法模式的实例去解读抽象工厂，比较形象，可以去读一下，也能从中品味两种工厂模式的区别和他们结合的威力。
 
 ## References
-[wikipedia | 抽象工厂模式](https://en.wikipedia.org/wiki/Abstract_factory_pattern)
+[1][wikipedia | 抽象工厂模式](https://en.wikipedia.org/wiki/Abstract_factory_pattern)
 
