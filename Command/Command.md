@@ -11,7 +11,7 @@
 ### 结构组成及作用
 
 下图是对命令模式定义的uml：
-![command uml diagram](command.png)
+![command uml diagram](Command.png)
 
 画出类图一目了然，图中command将receiver的action封装起来，以供执行。
 
@@ -37,6 +37,7 @@
 
 
 ### 效果及应用场景
+
 1. 在不同时刻拍队列、执行请求。也就是说，当使用者希望封装起来的command对象可以与原始“请求”有一个无关的生存期。
 2. 支持日志和系统恢复。
 3. 支持取消撤销操作。
