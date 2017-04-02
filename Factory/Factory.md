@@ -24,7 +24,7 @@
         break;
  }
 ~~~
-而以下这部分，却是一般不会变动的代码。
+而以下这部分，却是一般公有的不会变动的代码。
 ~~~
 product.prepare();
 product.make();
@@ -52,14 +52,35 @@ product.pack();
 
 额，对了，上面的<code>createProduct(String type)</code>方法可以改为静态(称为静态工厂)。当然，改为静态就不能通过继承来改变创建方法的行为。
 
-### 效果及应用场景
-
 ## 工厂方法模式
 
+### 是什么？
 
+工厂方法模式定义了一个创建对象的工厂接口，由子类负责实现这个方法，把实例化推迟到子类中。
+
+### 结构组成
+
+下图是工厂方法模式的UML类图：
+![FactoryMethod UML diagram](FactoryMethod.png)
+
+### 示例实现
+
+核心实现，在Store中增加一个工厂方法<code>createProduct(String type)</code>如下：
+
+[include:7-](../src/main/java/com/tea/factory/factoryMethod/Store.java)
+
+[完整代码看这里](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/factory/factoryMethod)。
 
 ## 抽象工厂模式
 
+### 是什么？
+
+抽象工厂模式提供一个接口，用于创建相关或依赖的类的家族。
+
+### 结构组成
 
 
-### References
+
+### 示例实现
+
+## References
