@@ -11,3 +11,4 @@
 * [工厂模式](Factory/Factory.md)
 * [命令模式](Command/Command.md)
 * [适配器模式](Adapter/Adapter.md)
+* [外观模式](Facade/Facade.md)
