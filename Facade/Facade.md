@@ -7,7 +7,7 @@
 ### 结构组成及作用
 
 外观模式是比较容易理解的一个设计模式。举个最易懂常见的例子，一般web后端开发人员都接触过MVC模式，而在MVC中，我们会将M层中分为Controller,Service,DAO，pojo等常见分层。
-而Service层就应用了外观模式，把巨多细节（n个DAO操作等等）按照一定的逻辑进行抽象封装，相当于下图中的Facade(外观)。
+而Service层就应用了外观模式，把巨多细节（n个DAO操作等等）按照一定的逻辑进行抽象封装在一起。简单来说，一般可能一个业务操作（service里的一个方法）里包含对多个dao的操作，这单个service方法相当于下图中的Facade(外观)。
 ![ Facade structure diagram](Facade.png)
 
 ### 示例实现
