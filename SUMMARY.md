@@ -13,4 +13,5 @@
 * [适配器模式](Adapter/Adapter.md)
 * [外观模式](Facade/Facade.md)
 * [模板方法模式](TemplateMethod/TemplateMethod.md)
+* [迭代器模式](Iterator/Iterator.md)
 
