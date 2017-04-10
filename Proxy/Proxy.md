@@ -24,13 +24,14 @@
 
 下面我将提供 远程代理、虚拟代理、保护代理三种形式的实现。
 
-#### 远程代理
-
-[完整代码么么哒](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/)。
-
-
 #### 虚拟代理
 
+觉得《head first设计模式》的例子挺好，本来想试着用javaFx模拟实现一下，后来做了下发现javaFx的Image加载图片时是不会假死，所以就照这书里的swing实现做了一次。
+
+代码不贴了，贴两个效果图，可以看到通过代理模式，图片实现延迟及异步加载了。
+
+![ output1 ](output1.png)
+![ output2 ](output2.png)
 
 [完整代码么么哒](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/virtualproxy/)。
 
@@ -55,10 +56,29 @@ DAO实现类
 
 ##### 动态代理
 
-[include:7-](../src/main/java/com/tea/proxy/protectProxy/staticProxy/ProtectedProxy.java)
-[include:7-](../src/main/java/com/tea/proxy/protectProxy/staticProxy/TestMain.java)
+[include:7-](../src/main/java/com/tea/proxy/protectProxy/dynamic/ProtectedProxy.java)
+[include:7-](../src/main/java/com/tea/proxy/protectProxy/dynamic/TestMain.java)
 
 [完整代码么么哒](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/protectProxy/)。
+
+#### 远程代理
+
+把远程代理放到这几个代理之后是因为远程代理还有我没能解决的rmi的报错问题。放在这里希望有缘人帮下忙。
+
+我在[github的remoteProxy](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/)目录里分别放了
+[深入浅出设计模式里的demo](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/gumball/)
+[一个小demo](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/demo/)
+[oracle java文档 rmi getting Started的helloworld demo](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/helloworld/)。
+
+[oracle doc|Getting Started Using Java RMI](https://docs.oracle.com/javase/8/docs/technotes/guides/rmi/hello/hello-world.html)
+
+翻了不少资料，也debug了好几个最后几个demo基本都卡在了这个exception上，但是问题下的解答并不能解决我的问题。
+[stackoverflow 问题 | java.rmi.ConnectException: Connection refused to host: 127.0.1.1; ](http://stackoverflow.com/questions/15685686/java-rmi-connectexception-connection-refused-to-host-127-0-1-1)
+
+我在网上也发了问题，望有人能解答。
+
+[完整代码么么哒](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/)。
+
 
 ### 效果及应用场景
 
