@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+
+public class TestIteratorCompileMain {
+    public TestIteratorCompileMain() {
+    }
+
+    public static void main(String[] args) {
+        String[] strings = new String[]{"a", "b", "c", "d", "e"};
+        System.out.println("=====print string array =====");
+        String[] list = strings;
+        int var3 = strings.length;
+
+        for(int s = 0; s < var3; ++s) {
+            String s1 = list[s];
+            System.out.println(s1);
+        }
+
+        System.out.println("=====print list =====");
+        ArrayList var6 = new ArrayList(Arrays.asList(strings));
+        Iterator var7 = var6.iterator();
+
+        while(var7.hasNext()) {
+            String var8 = (String)var7.next();
+            System.out.println(var8);
+        }
+
+    }
+}

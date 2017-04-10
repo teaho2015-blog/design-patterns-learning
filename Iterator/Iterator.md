@@ -37,7 +37,31 @@
 
 ### 后记
 
-//TODO foreach语法糖知识点
+这里补充相关的foreach的实现原理。
+~~~
+foreach即形如以下代码的形式:
+List<String> list = new ArrayList<>();
+list.add...
+...
+for(String s : list) {
+    ...
+}
+~~~
+众所周知，foreach能遍历集合类，先看下例子：
+[include:12-](../src/main/java/com/tea/iterator/TestIteratorCompileMain.java)
+
+那么应该有人疑惑为什么foreach能循环遍历集合？
+我将上面的java类例子的.class文件利用工具反编译得出如下代码（其实也可用javap -verbose来查看）:
+[include:12-](decompileFile.txt)
+
+对比上述两代码块，可得出结论：foreach是一个java语法糖。
+
+那么foreach的适用范围是什么？
+
+这是《java语言规范》对foreach的定义([Java Language Specification | 14.14.2. The enhanced for statement ](http://docs.oracle.com/javase/specs/jls/se8/html/jls-14.html#jls-14.14.2))，里面有一句话：
+>The type of the Expression must be Iterable or an array type (§10.1), or a compile-time error occurs.
+
+也就是说foreach仅适用于实现了Iterator接口的类或数组类型。
 
 ### references
 [1]Erich Gamma,Richard Helm,Ralph Johnson,John Vlissides.设计模式:可复用面向对象软件的基础[M].中国:机械工业出版社，2000
