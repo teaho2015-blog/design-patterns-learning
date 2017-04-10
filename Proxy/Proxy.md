@@ -56,26 +56,21 @@ DAO实现类
 
 ##### 动态代理
 
-[include:7-](../src/main/java/com/tea/proxy/protectProxy/dynamic/ProtectedProxy.java)
-[include:7-](../src/main/java/com/tea/proxy/protectProxy/dynamic/TestMain.java)
+[include:7-](../src/main/java/com/tea/proxy/protectProxy/dynamicProxy/ProtectedProxy.java)
+[include:7-](../src/main/java/com/tea/proxy/protectProxy/dynamicProxy/TestMain.java)
 
 [完整代码么么哒](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/protectProxy/)。
 
 #### 远程代理
 
-把远程代理放到这几个代理之后是因为远程代理还有我没能解决的rmi的报错问题。放在这里希望有缘人帮下忙。
+把远程代理放到这几个代理之后是因为远程代理还有我没能解决的rmi的报错问题。放在这里希望有熟悉rmi的有缘人帮下忙。
 
-我在[github的remoteProxy](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/)目录里分别放了
-[深入浅出设计模式里的demo](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/gumball/)
-[一个小demo](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/demo/)
-[oracle java文档 rmi getting Started的helloworld demo](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/helloworld/)。
+我在[github的remoteProxy](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/)目录里分别放了三个demo:
+1. [深入浅出设计模式里的demo](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/gumball/)
+2. [一个小demo](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/demo/)
+3. [oracle java文档 rmi getting Started的helloworld demo](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/helloworld/), [oracle doc|Getting Started Using Java RMI](https://docs.oracle.com/javase/8/docs/technotes/guides/rmi/hello/hello-world.html)。
 
-[oracle doc|Getting Started Using Java RMI](https://docs.oracle.com/javase/8/docs/technotes/guides/rmi/hello/hello-world.html)
-
-翻了不少资料，也debug了好几个最后几个demo基本都卡在了这个exception上，但是问题下的解答并不能解决我的问题。
-[stackoverflow 问题 | java.rmi.ConnectException: Connection refused to host: 127.0.1.1; ](http://stackoverflow.com/questions/15685686/java-rmi-connectexception-connection-refused-to-host-127-0-1-1)
-
-我在网上也发了问题，望有人能解答。
+翻了不少资料，也debug了好几个最后几个demo基本都卡在了这个exception（[stackoverflow 问题 | java.rmi.ConnectException: Connection refused to host: 127.0.1.1; ](http://stackoverflow.com/questions/15685686/java-rmi-connectexception-connection-refused-to-host-127-0-1-1)）上，但是问题下的解答并不能解决我的问题。我在网上也发了问题，望有人能解答。
 
 [完整代码么么哒](https://github.com/teaho2015/design-patterns-learning/tree/master/src/main/java/com/tea/proxy/remoteproxy/)。
 
