@@ -11,7 +11,7 @@
 
 从上图可以看出，其实适配器模式就是让一个对象去弥合两个接口，我们可以将这个现有的类与我们的目标进行适配，最终获得一个符合需要的接口并且包含待复用的类的功能的类。
 
-所以，要明确一点，适配器模式是补救措施，在系统设计过程中一般不会使用该模式。
+所以，要明确一点，适配器模式是补救措施，在系统设计阶段一般不会使用该模式。
 
 适配器模式一般有两种：对象适配器和类适配器模式。
 
@@ -89,6 +89,46 @@ public interface Iterator<E> {
 
  处理旧系统代码时，希望能重用代码或希望能弥合旧系统与新系统的接口。
 
+### 后记
+
+#### 关于java支不支持类适配器的问题。
+
+我一开始写这篇适配器模式时想的是不支持。也因为维基百科中说Java8支持适配器模式，所以这个问题一直萦绕在心。今天想认真再想下。
+
+首先，谨记[定义](#是什么？)所描述的，那么类适配器的实现不过是通过多继承来实现一种单向或双向的适配器。
+
+Java8由于接口的默认方法新特性，而具备了一种“类似”多继承的表征。但是，这个表征毕竟不等于多继承。
+
+因为类适配器必须通过比如<code>extend AClass, BClass</code>来获得两个目标的实现，
+所以类似于如下实现是可以的，<code>interface C</code>相当于Adapter。
+````
+interface A1 {
+    default void say(int a) {
+        System.out.println("A1");
+    }
+}
+
+interface A2 extends A1 {
+
+}
+
+interface B {
+    default void say(int a) {
+        System.out.println("B");
+    }
+}
+interface C extends A2,B{
+    default void say(int a) {
+        B.super.say(a);
+    }
+}
+````
+
+但是毕竟java8不提供多继承（即不能extend 两个类），所以结论是类适配器模式在java里是非常局限的。
+
+对了，在找资料的过程，找到两个非常有干货的文章，他们都是描述了当实现了多个接口和继承了类中存在同名方法时，java的选择机制。
+* [Java 8 默认方法和多继承](http://www.importnew.com/16013.html)
+* [Java language specification | 15.12.2.5. Choosing the Most Specific Method](http://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.12.2.5)
 
 
 ### references
