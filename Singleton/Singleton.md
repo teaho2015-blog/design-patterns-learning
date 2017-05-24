@@ -47,15 +47,27 @@
 [import:7-](../src/main/java/com/tea/singleton/Singleton3.java)
 这种书写方式是《Effective Java》中最推荐的单例写法，一目了然，推荐。
 
+#### 静态的内部类
+[import:7-](../src/main/java/com/tea/singleton/Singleton4.java)
+
 ### 考虑反射的单例
 其实这种情况比较少出现。但是，如果存在享有特权的客户端使用反射，调用私有构造器，就需要防范一下。
+
 [枚举](#枚举)天生能免疫这用情况。
+
 [双重校验锁](#双重校验锁)能通过在默认构造器中加上如下代码防御反射：
 > synchronized (Singleton2.class) {  
 >   if (instance != null) {  
 >       //throw 一个异常  
 >   }  
->}  
+>}
+
+### 比较各种单例写法占用的字节数
+
+最近使用<code>java.lang.instrument.Instrumentation</code>，通过javaagent测试了单例的各实现的总大小(Class + Object)。
+
+事实上，测完之后才惊觉这是件“然并卵”的操作，不过测都测了，就在这放出来以供参考吧。(下图忽略英文，4个数字[16,16,24,16]依次是上述4个单例模式占用的字节数)
+![Singleton size tester](screenshot.png)
 
 ### References
 [1] [ 知乎|方法区的Class信息,又称为永久代,是否属于Java堆？ ](https://www.zhihu.com/question/49044988)
