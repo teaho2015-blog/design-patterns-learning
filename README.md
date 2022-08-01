@@ -30,6 +30,6 @@
 [状态模式]: https://design-pattern-learning.gitbook.teaho.net/State/State.html
 [策略模式]: https://design-pattern-learning.gitbook.teaho.net/Strategy/Strategy.html
 [迭代器模式]: https://design-pattern-learning.gitbook.teaho.net/Iterator/Iterator.html
-[迭代器模式]: ./memento/Memento.md
+[备忘录模式]: ./memento/Memento.md
 
 
