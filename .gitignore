@@ -15,3 +15,7 @@ _book
 *.mobi
 *.pdf
 *.iml
+
+
+.idea
+out
