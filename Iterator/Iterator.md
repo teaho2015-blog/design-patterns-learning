@@ -64,4 +64,5 @@ for(String s : list) {
 也就是说foreach仅适用于实现了Iterator接口的类或数组类型。
 
 ### references
+
 [1]Erich Gamma,Richard Helm,Ralph Johnson,John Vlissides.设计模式:可复用面向对象软件的基础[M].中国:机械工业出版社，2000

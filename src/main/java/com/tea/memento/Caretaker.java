@@ -1,13 +1,16 @@
 package com.tea.memento;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Caretaker {
-    private Memento memento;
- 
-    public Memento retieveMemento() {
-        return memento;
+    private List<Memento> mementos = new ArrayList<>();
+
+    public List<Memento> retieveMemento() {
+        return mementos;
     }
- 
+
     public void setMemento(Memento memento) {
-        this.memento = memento;
+        this.mementos.add(memento);
     }
 }
