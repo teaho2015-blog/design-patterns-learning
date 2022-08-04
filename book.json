@@ -1,13 +1,14 @@
 {
 
     "plugins": [
-                "include-codeblock",
-                "advanced-emoji",
-                "anchors",
-                "disqus",
-                "ga",
-                "plantuml"
-               ],
+      "include-codeblock",
+      "advanced-emoji",
+      "anchors",
+      "disqus",
+      "ga",
+      "plantuml",
+      "page-treeview"
+     ],
     "pluginsConfig": {
         "include-codeblock": {
             "template": "default",
@@ -19,6 +20,12 @@
         }, 
         "ga": {
             "token": "UA-90704189-2"
+        },
+        "page-treeview": {
+          "copyright": "",
+          "minHeaderCount": "4",
+          "minHeaderDeep": "10"
+
         }
         
     }
